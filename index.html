@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <style>
         body {
@@ -25,10 +26,11 @@
               </a>
 
               <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-                <a class="me-3 py-2 text-dark text-decoration-none" href="#about">About</a>
-                <a class="me-3 py-2 text-dark text-decoration-none" href="#publications">Publications</a>
-                <a class="me-3 py-2 text-dark text-decoration-none" href="#publications">Projects</a>
-                <a class="py-2 text-dark text-decoration-none" href="#contact">Contact Me</a>
+                  <a class="me-3 py-2 text-dark text-decoration-none" href="#about">About</a>
+                  <a class="me-3 py-2 text-dark text-decoration-none" href="#publications">Publications</a>
+                  <a class="me-3 py-2 text-dark text-decoration-none" href="#publications">Projects</a>
+                  <a class="me-3 py-2 text-dark text-decoration-none" href="#additional">Additional Works</a>
+                  <a class="py-2 text-dark text-decoration-none" href="#contact">Contact Me</a>
               </nav>
             </div>
         </header>
@@ -40,7 +42,7 @@
                 <div class="col-12 col-md-9 p-3">
                     <h1><strong>Hello, I'm Luke!</strong></h1>
                     <h3>PhD Student @ Newcastle University</h3>
-                    <p><strong>Interests:</strong> Data Visualisation, Explainable AI, Dimensionality Reduction<br><strong>Email:</strong> watkin.luke2003@gmail.com</p>
+                    <p><strong>Interests:</strong> Data Visualisation, Explainable AI, Dimensionality Reduction<br><strong>Email:</strong> watkin.luke2003@gmail.com<br><strong>Where to find me:</strong> [tba]</p>
                     <p><i>"[INSERT QUOTE HERE]"</i> - [NAME]</p>
                 </div>
             </div>
@@ -57,23 +59,41 @@
             <div id="publications">
                 <h3><strong>Publications</strong></h3>
 
-                <pub class="card mb-4 rounded-3">
-                  <div class="card-body">
-                      <div class="row">
-                          <div class="col-9 col-md-3 mx-auto mx-md-0 text-center mb-md-1">
-                              <img src="Images/shap_dbm.png" class="img-fluid">
-                          </div>
-                          <div class="col-12 col-md-9">
-                              <h5 class="card-title pricing-card-title"><strong>ShapDBM: Exploring decision boundary maps in shapley space</strong></h5>
-                              <hr>
-                              <p><strong>Authors:</strong> <i>Luke Watkin</i>, Daniel Archambault, Alex Telea</p>
-                              <p><strong>Venue:</strong> EuroVis 2026, Short Papers</p>
-                              <p><strong>Summary:</strong> <i>This paper presents a new technique for computing Decision Boundary Maps (DBMs) for complex datasets by computing the base projection using the Shapley values of our chosen dataset. We find our technique produce visualisations of similar or higher quality compared to data-only derived DBMs.</i></p>
-                              <p><strong>Available:</strong> <a href="https://arxiv.org/abs/2603.22235" target="_blank" class="link-dark link-underline link-underline-opacity-0">[ <i class="fa-solid fa-file"></i> Paper ]</a> <a class="link-dark link-underline link-underline-opacity-0" href="https://github.com/c1014695Newcastle/ShapDBM-Release-Version.git" target="_blank">[ <i class="fa-solid fa-file-code"></i> Code ]</a></p>
-                          </div>
-                      </div>
-                  </div>
-                </pub>
+                <div class="accordion accordion-flush" id="publicationAccordion">
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header" id="pub2026">
+                            <button class="accordion-button collapsed pt-1 pb-1" type="button" data-bs-toggle="collapse" data-bs-target="#pub2026-body" aria-expanded="false" aria-controls="pub2026-body">
+                                <h4><strong>2026</strong></h4>
+                            </button>
+                        </h2>
+
+                        <div id="pub2026-body" class="accordion-collapse collapse" aria-labelledby="pub2026" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+
+                                <pub class="card mb-4 rounded-3">
+                                      <div class="card-body">
+                                          <div class="row">
+                                              <div class="col-9 col-md-3 mx-auto mx-md-0 text-center mb-md-1">
+                                                  <img src="Images/shap_dbm.png" class="img-fluid">
+                                              </div>
+                                              <div class="col-12 col-md-9">
+                                                  <h5 class="card-title pricing-card-title"><strong>ShapDBM: Exploring decision boundary maps in shapley space</strong></h5>
+                                                  <hr>
+                                                  <p><strong>Authors:</strong> <i>Luke Watkin</i>, Daniel Archambault, Alex Telea</p>
+                                                  <p><strong>Venue:</strong> EuroVis 2026, Short Papers</p>
+                                                  <p><strong>Summary:</strong> <i>This paper presents a new technique for computing Decision Boundary Maps (DBMs) for complex datasets by computing the base projection using the Shapley values of our chosen dataset. We find our technique produce visualisations of similar or higher quality compared to data-only derived DBMs.</i></p>
+                                                  <p><strong>Available:</strong> <a href="https://arxiv.org/abs/2603.22235" target="_blank" class="link-dark link-underline link-underline-opacity-0">[ <i class="fa-solid fa-file"></i> Paper ]</a> <a class="link-dark link-underline link-underline-opacity-0" href="https://github.com/c1014695Newcastle/ShapDBM-Release-Version.git" target="_blank">[ <i class="fa-solid fa-file-code"></i> Code ]</a></p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </pub>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
 
                 <div class="text-center">
                     <p><i>More coming soon!</i></p>
@@ -82,8 +102,146 @@
             </div>
             <hr>
             <div id="projects">
-                <h3><strong>Research Projects</strong></h3>
+                <h3><strong>Projects</strong></h3>
                 <p>[TBA]</p>
+            </div>
+            <hr>
+            <div id="additional">
+                <h3><strong>Additional Work</strong></h3>
+                    <p>I have taken on additional work during my studies, detailed below.</p>
+
+                <h5><strong>Talks</strong></h5>
+                    <p>Below is a list of some of the guest lectures, seminars and conference talks I have given over the course of my PhD.</p>
+                    <ul>
+                        <li><p><strong>Internal conference talk in 'SAgE Faculty Research Conference' (2026)</strong> - [SUMMARY]</p></li>
+                        <li><p><strong>Internal talk to visiting WASP institution faculty and PhD students</strong> - [SUMMARY]</p></li>
+                        <li><p><strong>Guest Lecture in 'Introducing Contemporary Topics' undergraduate module (2026)</strong> - [SUMMARY] </p></li>
+                        <li><p><strong>Conference Talk in 'EuroVis 2026 Short Papers' (2026)</strong> - [SUMMARY] </p></li>
+                    </ul>
+
+                <h5><strong>Paper Reviews</strong></h5>
+                    <ul>
+                        <li><p><strong>Student Reviewer IEEEVis (2024)</strong> - 2 papers</p></li>
+                        <li><p><strong>Student Reviewer IEEEVis (2025)</strong> - 1 paper</p></li>
+                    </ul>
+
+                <h5><strong>Teaching and Marking</strong></h5>
+                
+                
+                <div class="accordion accordion-flush mt-2" id="modulesAccordion">
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header" id="talks2026">
+                            <button class="accordion-button collapsed pt-1 pb-1" type="button" data-bs-toggle="collapse" data-bs-target="#talks2026-body" aria-expanded="false" aria-controls="talks2026-body">
+                                <h5><strong>2026</strong></h5>
+                            </button>
+                        </h2>
+
+                        <div id="talks2026-body" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+
+                                <pub class="card mb-3 rounded-3">
+                                    <div class="card-body">
+                                      <div class="row">
+                                          <h6 class="card-title pricing-card-title"><strong>'CSC2034: Introducing Contemporary Topics' Bsc Module (Game Dev)</strong></h6>
+                                          <p><strong>Role:</strong> Practical Teaching and Demonstrating, Marking<br><strong>Key skills:</strong> Unity/C#</p>
+                                      </div>
+                                  </div>
+                                </pub>
+
+                                <pub class="card mb-3 rounded-3">
+                                    <div class="card-body">
+                                      <div class="row">
+                                          <h6 class="card-title pricing-card-title"><strong>'CSC8626: Data Visualisation' Msc Module</strong></h6>
+                                          <p><strong>Role:</strong> Practical Teaching and Demonstrating, Marking<br><strong>Key skills:</strong> PowerBi, Visualisation theory</p>
+                                      </div>
+                                  </div>
+                                </pub>
+
+                                <pub class="card mb-3 rounded-3">
+                                    <div class="card-body">
+                                      <div class="row">
+                                          <h6 class="card-title pricing-card-title"><strong>'CSC8628: Image Processing' Msc Module</strong></h6>
+                                          <p><strong>Role:</strong> Practical Teaching and Demonstrating<br><strong>Key skills:</strong> Python programming (numpy, scikit-image), image handling/filtering, convolution operations</p>
+                                      </div>
+                                  </div>
+                                </pub>
+
+                                <pub class="card mb-3 rounded-3">
+                                    <div class="card-body">
+                                      <div class="row">
+                                          <h6 class="card-title pricing-card-title"><strong>'DSC8002: Programming and Machine Learning' Msc Module</strong></h6>
+                                          <p><strong>Role:</strong> Practical Teaching and Demonstrating<br><strong>Key skills:</strong> Python programming (numpy, scikit-learn, matplotlib), data handling, data cleaning, machine learning theory</p>
+                                      </div>
+                                  </div>
+                                </pub>
+
+                            </div>
+                        </div>
+                    
+                        <h2 class="accordion-header" id="talks2025">
+                            <button class="accordion-button collapsed pt-1 pb-1" type="button" data-bs-toggle="collapse" data-bs-target="#talks2025-body" aria-expanded="false" aria-controls="talks2025-body">
+                                <h5><strong>2025</strong></h5>
+                            </button>
+                        </h2>
+
+                        <div id="talks2025-body" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+
+                                <pub class="card mb-3 rounded-3">
+                                    <div class="card-body">
+                                      <div class="row">
+                                          <h6 class="card-title pricing-card-title"><strong>'CSC8626: Data Visualisation' Msc Module</strong></h6>
+                                          <p><strong>Role:</strong> Practical Teaching and Demonstrating, Marking<br><strong>Key skills:</strong> PowerBi, Visualisation theory</p>
+                                      </div>
+                                  </div>
+                                </pub>
+
+                                <pub class="card mb-3 rounded-3">
+                                    <div class="card-body">
+                                      <div class="row">
+                                          <h6 class="card-title pricing-card-title"><strong>'CSC3833: Data Visualisation' Bsc Module</strong></h6>
+                                          <p><strong>Role:</strong> Practical Teaching and Demonstrating, Marking<br><strong>Key skills:</strong> Python programming (vega-altair, pandas), Visualisation theory</p>
+                                      </div>
+                                  </div>
+                                </pub>
+
+                                <pub class="card mb-3 rounded-3">
+                                    <div class="card-body">
+                                      <div class="row">
+                                          <h6 class="card-title pricing-card-title"><strong>'CSC3831: Computer Vision & AI (2025)' Bsc Module</strong></h6>
+                                          <p><strong>Role:</strong> Practical Teaching and Demonstrating<br><strong>Key skills:</strong> Python programming (numpy, scikit-learn, tensorflow, pytorch), data handling, data cleaning, dimensionality reduction, machine learning theory, convolution operations</p>
+                                      </div>
+                                  </div>
+                                </pub>
+                                
+                            </div>
+                        </div>
+                
+                        <h2 class="accordion-header" id="talks2024">
+                            <button class="accordion-button collapsed pt-1 pb-1" type="button" data-bs-toggle="collapse" data-bs-target="#talks2024-body" aria-expanded="false" aria-controls="talks2024-body">
+                                <h5><strong>2024</strong></h5>
+                            </button>
+                        </h2>
+
+                        <div id="talks2024-body" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+
+                                <pub class="card mb-3 rounded-3">
+                                    <div class="card-body">
+                                      <div class="row">
+                                          <h5 class="card-title pricing-card-title"><strong>'CSC8626: Image Informatics' Msc Module</strong></h5>
+                                          <p><strong>Role:</strong> Practical Teaching and Demonstrating<br><strong>Key skills:</strong> Python programming (numpy, scikit-image), image handling/filtering, convolution operations</p>
+                                      </div>
+                                  </div>
+                                </pub>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
             <hr>
             <div id="contact">
