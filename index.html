@@ -14,6 +14,22 @@
             font-family: system-ui, sans-serif;
             font-weight: 400;
         }
+
+        nav .nav-link.active {
+            color: #762099 !important;
+            font-weight: bold;
+            text-decoration: underline !important;
+        }
+
+        #about, #publications, #projects, #additional, #contact {
+            scroll-margin-top: 100px;
+        }
+
+        p a:hover {
+            color: #762099 !important;
+            font-weight: bold;
+        }
+
     </style>
     <title>Luke Watkin</title>
 </head>
@@ -21,16 +37,16 @@
     <div class="container mb">
         <header class="sticky-top mb-3">
             <div class="d-flex flex-column flex-md-row align-items-center pt-3 pb-3 border-bottom bg-white">
-              <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+              <a href="index.html" class="d-flex align-items-center text-dark text-decoration-none" id="nameBar">
                   <span class="fs-4"><strong>Luke Watkin</strong></span>
               </a>
 
               <nav class="d-inline-flex text-center mt-2 mt-md-0 ms-md-auto">
-                  <a class="me-3 py-2 text-dark text-decoration-none" href="#about">About</a>
-                  <a class="me-3 py-2 text-dark text-decoration-none" href="#publications">Publications</a>
-                  <a class="me-3 py-2 text-dark text-decoration-none" href="#publications">Projects</a>
-                  <a class="me-3 py-2 text-dark text-decoration-none" href="#additional">Additional Works</a>
-                  <a class="py-2 text-dark text-decoration-none" href="#contact">Contact Me</a>
+                  <a class="nav-link me-3 py-2 text-dark text-decoration-none active" href="#about">About</a>
+                  <a class="nav-link me-3 py-2 text-dark text-decoration-none" href="#publications">Publications</a>
+                  <a class="nav-link me-3 py-2 text-dark text-decoration-none" href="#projects">Projects</a>
+                  <a class="nav-link me-3 py-2 text-dark text-decoration-none" href="#additional">Additional Work</a>
+                  <a class="nav-link py-2 text-dark text-decoration-none" href="#contact">Contact Me</a>
               </nav>
             </div>
         </header>
@@ -338,13 +354,13 @@
     <footer class="bg-dark text-light mt-5">
       <div class="container p-4">
           <div class="row">
-              <div class="col-sm-4 d-none d-sm-block">
-                  <p><a class="link-light text-decoration-none" href="#about">About</a></p>
-                  <p><a class="link-light text-decoration-none" href="#publications">Publications</a></p>
-                  <p><a class="link-light text-decoration-none" href="#publications">Projects</a></p>
-                  <p><a class="link-light text-decoration-none" href="#additional">Additional Works</a></p>
-                  <p><a class="link-light text-decoration-none" href="#contact">Contact Me</a></p>
-              </div>
+            <div class="col-sm-4 d-none d-sm-block">
+                <p><a class="side-nav-link link-light text-decoration-none" href="#about">About</a></p>
+                <p><a class="side-nav-link link-light text-decoration-none" href="#publications">Publications</a></p>
+                <p><a class="side-nav-link link-light text-decoration-none" href="#projects">Projects</a></p>
+                <p><a class="side-nav-link link-light text-decoration-none" href="#additional">Additional Work</a></p>
+                <p><a class="side-nav-link link-light text-decoration-none" href="#contact">Contact Me</a></p>
+            </div>
               <div class = 'col-sm-4 d-12 text-center align-content-center'>
                   <p><strong>Built by Luke Watkin</strong></p>
                   <p>Last updated: Oct 2026</p>
@@ -360,4 +376,20 @@
     </footer>
 
 </body>
+<script>
+    const headerLinks = document.querySelectorAll('nav .nav-link');
+    const allLinks = document.querySelectorAll('nav .nav-link, .side-nav-link');
+
+    function setActiveLink(target) {
+        headerLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === target);
+        });
+    }
+
+    allLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            setActiveLink(this.getAttribute('href'));
+        });
+    });
+</script>
 </html>
