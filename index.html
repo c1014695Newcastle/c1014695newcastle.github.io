@@ -25,9 +25,13 @@
             scroll-margin-top: 100px;
         }
 
-        p a:hover {
+        p a.link-dark:hover,
+        p a.link-dark:hover strong {
             color: #762099 !important;
-            font-weight: bold;
+        }
+
+        span:hover {
+            color: #762099 !important;
         }
 
     </style>
@@ -65,7 +69,7 @@
             <hr>
             <div id="about">
                 <h3><strong>About Me</strong></h3>
-                <p>Hi, I'm Luke! I'm a third year PhD student with the <a href="https://blogs.ncl.ac.uk/nova/" target="_blank" class="link-dark">NoVA Group</a> at the School of Computing, Newcastle University, looking into <strong>explainable AI</strong> with a focus on <strong>model stability</strong>. Prior to this, I completed an Undergraduate Degree in Computer Science at Newcastle University with a focus on data science. My final year research project focussed on building secure embedded provenance credentials for images based on an open standard.</p>
+                <p>Hi, I'm Luke! I'm a third year PhD student with the <a href="https://blogs.ncl.ac.uk/nova/" target="_blank" class="link-dark"><strong>NoVA Group</strong></a> at the School of Computing, Newcastle University, looking into <strong>explainable AI</strong> with a focus on <strong>model stability</strong>. Prior to this, I completed an Undergraduate Degree in Computer Science at Newcastle University with a focus on data science. My final year research project focussed on building secure embedded provenance credentials for images based on an open standard.</p>
 
                 <p>My primary interests include...</p>
 
@@ -119,6 +123,24 @@
             <hr>
             <div id="projects">
                 <h3><strong>Projects</strong></h3>
+
+                <pub class="card mb-4 rounded-3">
+                  <div class="card-body">
+                      <div class="row">
+                          <div class="col-9 col-md-3 mx-auto mx-md-0 text-center mb-md-1">
+                              <img src="Images/phd.png" class="img-fluid">
+                          </div>
+                          <div class="col-12 col-md-9">
+                              <h5 class="card-title pricing-card-title"><strong>PhD Project: Visualising the Stability of Weights in Neural Networks (2024 - Ongoing)</strong></h5>
+                              <hr>
+                              <p><strong>Team:</strong> <i><u>Luke Watkin</u></i>, Prof. Daniel Archambault, Dr. Deepayan Bhowmik</p>
+                              <p><strong>Collaborators:</strong> Prof. Alex Telea (Utrecht University)</p>
+                              <p><strong>Summary:</strong> <i>For more information, <a href="https://blogs.ncl.ac.uk/nova/visualising-the-stability-of-weights-in-neural-networks/" target="_blank" class="link-dark link-underline link-underline-opacity-0">Click here</a>.</i></p>
+                              <p><strong>Available:</strong> <a href="https://www.georgebell.dev/project-pages/phd/DarkVisual.html" target="_blank" class="link-dark link-underline link-underline-opacity-0">[ <i class="fa-solid fa-chart-line"></i> Demo ]</a></p>
+                          </div>
+                      </div>
+                  </div>
+                </pub>
 
                 <pub class="card mb-4 rounded-3">
                   <div class="card-body">
